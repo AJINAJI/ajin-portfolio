@@ -23,7 +23,7 @@ function emailSent(userName, userEmail, userPhone, userMessage) {
 
     emailjs.send("service_x4w7vvh","template_4435reu", templateParams).then(function (response) {
         if (response.text == 'OK') {
-            swal("SUBMITTED SUCCESSFULLY!", "We will contact you", "success");
+            swal("SUBMITTED SUCCESSFULLY!", "Thank for contact me", "success");
             resetForm();
         } else {
             swal("TRY AGAIN", "There was an issue with submission", "error");
