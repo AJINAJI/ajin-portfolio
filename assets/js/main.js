@@ -277,5 +277,34 @@ document.querySelectorAll('.skill-item').forEach(skill => {
 });
 
 
+/**
+ * Dark Mode Toggle
+ */
+const darkToggle = document.querySelector('#darkToggle');
+const body = document.body;
+
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-mode');
+  if (darkToggle) darkToggle.textContent = '☀️';
+}
+
+if (darkToggle) {
+  darkToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+      darkToggle.textContent = '☀️';
+    } else {
+      localStorage.setItem('theme', 'light');
+      darkToggle.textContent = '🌙';
+    }
+  });
+}
+
+
 })();
 

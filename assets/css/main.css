@@ -1558,3 +1558,188 @@ section,
 .hero-content p {
   font-size: 1.2rem;
 }
+
+
+/* DarkMOde */
+
+/* ============================
+   GLOBAL DARK MODE
+============================ */
+
+body.dark-mode {
+  --background-color: #0b0f19;
+  --surface-color: #151a2e;
+  --default-color: #e4e6eb;
+  --heading-color: #ffffff;
+  --accent-color: #4facfe;
+  --contrast-color: #ffffff;
+
+  --nav-color: #e4e6eb;
+  --nav-hover-color: #ffffff;
+  --nav-mobile-background-color: #0b0f19;
+  --nav-dropdown-background-color: #151a2e;
+  --nav-dropdown-color: #c7c9d3;
+  --nav-dropdown-hover-color: #ffffff;
+}
+
+/* Ensure light-background adapts in dark mode */
+body.dark-mode .light-background {
+  background: #091022 !important;
+}
+
+/* Cards / containers */
+body.dark-mode .resume-item,
+body.dark-mode .portfolio-content,
+body.dark-mode .service-item,
+body.dark-mode .testimonial-item,
+body.dark-mode .info-wrap,
+body.dark-mode .info-item {
+  background: #151a2e;
+  color: #e4e6eb;
+}
+
+/* Text fixes */
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li {
+  color: #d1d5db;
+}
+
+/* Smooth transitions */
+
+body,
+section,
+header,
+footer,
+.resume-item,
+.portfolio-content,
+.testimonial-item {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* ============================
+   DARK MODE TOGGLE BUTTON
+============================ */
+
+.dark-toggle {
+  position: fixed;
+  bottom: 22px;
+  left: 22px;
+  z-index: 9999;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.dark-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   DARK MODE – CONTACT FORM
+========================= */
+
+body.dark-mode .contact {
+  background-color: var(--background-color);
+}
+
+/* Input & textarea */
+body.dark-mode .contact .form-control {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Placeholder text */
+body.dark-mode .contact .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Floating labels */
+body.dark-mode .contact .form-floating > label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* When input is focused */
+body.dark-mode .contact .form-control:focus {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+  border-color: var(--accent-color);
+  box-shadow: none;
+}
+
+/* Floating label active state */
+body.dark-mode .form-floating > .form-control:focus ~ label,
+body.dark-mode .form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: var(--accent-color);
+}
+
+/* Error text */
+body.dark-mode .contact small.text-danger {
+  color: #ff6b6b;
+}
+
+/* Button */
+body.dark-mode .contact .btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+}
+
+body.dark-mode .contact .btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+/* ================================
+   FORCE DARK MODE – TESTIMONIALS
+================================ */
+
+/* Slide background */
+body.dark-mode .swiper-slide,
+body.dark-mode .testimonial-item {
+  background: #121212 !important;
+  color: #c21111 !important;
+}
+
+/* Card */
+body.dark-mode .testimonial-item {
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  border-radius: 12px;
+} 
+
+/* Text */
+body.dark-mode .testimonial-item p,
+body.dark-mode .testimonial-item span {
+  color: #0a0eee !important;
+}
+
+/* Quote icons */
+body.dark-mode .testimonial-item .quote-icon-left,
+body.dark-mode .testimonial-item .quote-icon-right {
+  color: #4fc3f7 !important;
+}
+
+/* Name */
+body.dark-mode .testimonial-item h3 {
+  color: #4fdb25 !important;
+}
+
+/* Role */
+body.dark-mode .testimonial-item h4 {
+  color: #f017f0 !important;
+}
+
+/* Image */
+body.dark-mode .testimonial-img {
+  border: 2px solid #4fc3f7 !important;
+  background: #121212 !important;
+}
+
+
