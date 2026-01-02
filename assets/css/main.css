@@ -401,13 +401,11 @@ h6 {
 #preloader {
   position: fixed;
   inset: 0;
-  background: linear-gradient(
-  to right,
+  background: radial-gradient(
+  circle at center,
   rgba(211, 10, 218, 0.45),
   rgba(180, 80, 220, 0.42),
-  rgba(140, 120, 240, 0.4),
-  rgba(90, 180, 220, 0.38),
-  rgba(120, 240, 210, 0.35)
+ 
 );
   backdrop-filter: blur(2px);
   display: flex;
@@ -415,6 +413,19 @@ h6 {
   align-items: center;
   z-index: 999999;
 }
+
+/* #preloader {
+ background: radial-gradient(
+  circle at center,
+  rgba(59, 240, 128, 0.75),
+  rgba(236, 10, 10, 0.65),
+  rgba(131, 56, 236, 0.55),
+  rgba(58, 134, 255, 0.45),
+  rgba(25, 0, 255, 0.35)
+);
+
+} */
+
 
 .glass-neon {
   width: 80px;
@@ -431,17 +442,7 @@ h6 {
   to   { box-shadow: 0 0 30px var(--accent-color); }
 }
 
-#preloader {
- background: radial-gradient(
-  circle at center,
-  rgba(59, 240, 128, 0.75),
-  rgba(236, 10, 10, 0.65),
-  rgba(131, 56, 236, 0.55),
-  rgba(58, 134, 255, 0.45),
-  rgba(25, 0, 255, 0.35)
-);
 
-}
 
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
