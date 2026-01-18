@@ -306,5 +306,39 @@ if (darkToggle) {
 }
 
 
+
+//  PAGE GETTING DOWNLOAD
+// document.addEventListener('DOMContentLoaded', function () {
+//   const downloadBtn = document.getElementById('downloadBtn');
+//   const resume = document.getElementById('resume');
+
+//   if (!downloadBtn || !resume) {
+//     console.error('Resume or button not found');
+//     return;
+//   }
+
+//   downloadBtn.addEventListener('click', function () {
+//     window.print();
+//   });
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const downloadBtn = document.getElementById('downloadBtn');
+
+  if (!downloadBtn) {
+    console.error('Download button not found');
+    return;
+  }
+
+  downloadBtn.addEventListener('click', function () {
+    window.open(
+      'assets/pdf/Automation-test-engineer.pdf',
+      '_blank',
+      'noopener,noreferrer'
+    );
+  });
+});
+
+
 })();
 

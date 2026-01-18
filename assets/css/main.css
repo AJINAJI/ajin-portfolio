@@ -1764,3 +1764,30 @@ body.dark-mode .testimonial-img {
 }
 
 
+
+@media print {
+
+  body * {
+    visibility: hidden;
+  }
+
+  #resume, #resume * {
+    visibility: visible;
+  }
+
+  #resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  button {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
