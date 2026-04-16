@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   downloadBtn.addEventListener('click', function () {
     window.open(
-      'assets/pdf/Automation-test-engineer.pdf',
+      'assets/pdf/automation-test-engineer.pdf',
       '_blank',
       'noopener,noreferrer'
     );
